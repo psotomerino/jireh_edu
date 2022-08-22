@@ -17,9 +17,6 @@
 
 }
 </style>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla doloribus debitis corrupti libero voluptate sint architecto obcaecati quae officiis, beatae nesciunt aperiam ab! Tenetur veritatis perferendis eligendi neque exercitationem qui.
-Est, accusamus voluptate amet architecto veritatis quia deserunt ipsam dolore quos totam voluptatem quam facilis quaerat corporis. Omnis veniam quae illo natus, sapiente non, nesciunt quia cumque, obcaecati ipsa placeat!
-Tempora necessitatibus voluptate laboriosam repellat laborum fugiat nostrum dicta modi dolores quasi explicabo sapiente fuga recusandae beatae dolor, praesentium perferendis magni iure commodi hic blanditiis atque et doloremque repudiandae? Consectetur.</p> 
 <div id="enca">
 <h3>Curriculo priorizado con enfasis en competencias</h3>
 <div id="menu_curri">
