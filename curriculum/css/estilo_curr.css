@@ -1,0 +1,34 @@
+.Contenedor_OB{
+    width: 90%;
+    margin-left: 15px;;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-gap: 5em;
+}
+#table_OB{
+    width: 100%;    
+}
+#menu_curri{
+    width: auto;
+    height: auto;
+    margin-top: 1px;
+    display: grid;
+    grid-template-columns: 17% 17% 17% 17% 17%;
+    grid-gap: 1em;
+    background-color: rgb(182, 167, 167);
+}
+.menu_item:hover {
+    background-color: greenyellow;
+    padding: 8px;
+}
+
+.Contenedor_OE{
+    width: 90%;
+    margin-left: 15px;;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-gap: 5em;
+}
+#table_OE{
+    width: 100%;    
+}

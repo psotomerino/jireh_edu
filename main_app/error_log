@@ -1,0 +1,15 @@
+[25-Jun-2020 21:42:42 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/jirehedu/public_html/main_app/salir.php on line 3
+[25-Jun-2020 21:49:16 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/jirehedu/public_html/main_app/salir.php on line 3
+[26-Jun-2020 19:36:25 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/jirehedu/public_html/main_app/salir.php on line 3
+[26-Jun-2020 19:39:42 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/jirehedu/public_html/main_app/salir.php on line 3
+[26-Jun-2020 19:59:03 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/jirehedu/public_html/main_app/salir.php on line 3
+[26-Jun-2020 20:02:26 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/jirehedu/public_html/main_app/salir.php on line 3
+[26-Jun-2020 20:56:03 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/jirehedu/public_html/main_app/salir.php on line 3
+[26-Jun-2020 21:00:11 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/jirehedu/public_html/main_app/salir.php on line 3
+[27-Jun-2020 20:13:17 UTC] PHP Warning:  require(../config.php): failed to open stream: No such file or directory in /home2/jirehedu/public_html/main_app/ver_tabla.php on line 2
+[27-Jun-2020 20:13:17 UTC] PHP Warning:  require(../config.php): failed to open stream: No such file or directory in /home2/jirehedu/public_html/main_app/ver_tabla.php on line 2
+[27-Jun-2020 20:13:17 UTC] PHP Fatal error:  require(): Failed opening required '../config.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home2/jirehedu/public_html/main_app/ver_tabla.php on line 2
+[27-Jun-2020 20:13:48 UTC] PHP Warning:  require(../config.php): failed to open stream: No such file or directory in /home2/jirehedu/public_html/main_app/ver_tabla.php on line 2
+[27-Jun-2020 20:13:48 UTC] PHP Warning:  require(../config.php): failed to open stream: No such file or directory in /home2/jirehedu/public_html/main_app/ver_tabla.php on line 2
+[27-Jun-2020 20:13:48 UTC] PHP Fatal error:  require(): Failed opening required '../config.php' (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home2/jirehedu/public_html/main_app/ver_tabla.php on line 2
+[27-Jun-2020 20:14:16 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home2/jirehedu/public_html/main_app/ver_tabla.php on line 19

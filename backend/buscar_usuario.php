@@ -1,0 +1,18 @@
+<?php 
+    
+    $Cedula =$_POST["cedula"];
+    require "../main_app/conexion.php";
+    $mysqli->set_charset('utf8');
+    //echo $Cedula;
+    if ($busqueda = $mysqli->prepare("SELECT * FROM  Usuarios WHERE Cedula = '$Cedula'")){
+        $busqueda->execute();
+        $resultado = $busqueda->get_result();
+        if ($resultado->num_rows == 1){
+           echo json_encode(array(success => 1));
+        }else {
+           echo json_encode(array(success => 0));
+        }
+        $busqueda->close();
+    }
+
+?>
