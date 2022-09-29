@@ -29,10 +29,12 @@
 </div>
 <div class ="Contenedor_OB">
     <div>
-
+        <p><b>Asignaturas</b>
         <select id="lista_asignatura" name="asignatura" class="form-control"></select>
-      </p>
-      <p><button  type="button" class="btn btn-success"  data-bs-toggle="modal"  data-bs-target="#newOB">NUEVO OBJETIVO GENERAL</button></p>
+        </p>
+        <p>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">NUEVO OBJETIVO GENERAL</button>
+        </p>
     </div>
     <div>
         <table id="table_OB" class="table table-striped">
@@ -44,6 +46,7 @@
         </table>
     </div>
 </div>
+
 <div class ="Contenedor_OE">
     <div>
         <p><b>Asignaturas</b>
@@ -67,21 +70,41 @@
 ********************************
 ** INGRESO OBJETIVOS GENERALES ** -->
 <!-- Modal -->
-<div class="modal fade" id="newOB" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <?php include '../main_app/docente/ingreso_curriculum_OG.php'; ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- *** EDITAR OBJETIVO GENERAL *** -->
+<div class="modal fade" id="editOB" tabindex="-1" aria-labelledby="editOBLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="editOBLabel">ACTUALIZACION DE OBJETIVO GENERAL</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <?php 
-            include '../main_app/docente/ingreso_curriculum_OE.php';
-          ?>
+          <form class="form-control"action="" id="form_editOG">
+            <input type="hidden" class="form-control mb-2" name="id_OG_" id="id_OG_">
+            <textarea name="OB_edit"  class="_text_edit"></textarea>
+          </form> 
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" id="btn_OGEdit">Guardar Cambios</button>
         </div>
       </div>
     </div>
@@ -89,4 +112,5 @@
 
 
 <script src="js/para_curr.js"></script>
+<script src="../js/plan_clase.js"></script>
 <script src="https://kit.fontawesome.com/1f8e03fea0.js" crossorigin="anonymous"></script>    

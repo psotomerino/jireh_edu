@@ -11,7 +11,8 @@ function get_OB(){
     
     $json = array();
     while ($fila =  mysqli_fetch_array($resultado)){
-        $json[]=array (   
+        $json[]=array (  
+          'id_OG' => $fila['id_OG'],
           'Objetivo_General' => $fila['Objetivo_General']    
                
         );

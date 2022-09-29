@@ -5,20 +5,22 @@
     include '../../templates/header.php';
     include '../../templates/footer.php';
     include 'plan_clase.php';
-    include 'ingreso_curriculum_OE.php';
-    include 'ingreso_curriculum_Destrezas.php';
-    include 'ingreso_curriculum_CE.php';
-    include 'ingreso_curriculum_IE.php';
+    // include 'ingreso_curriculum_OE.php';
+    // include 'ingreso_curriculum_Destrezas.php';
+    // include 'ingreso_curriculum_CE.php';
+    // include 'ingreso_curriculum_IE.php';
     include 'nuevo_plan2.php';
     include 'mis_planes.php';
     include 'plan_micro_edit.php';
-    include 'silabo.php';
+    include 'lectivo2022_2023/silabo_2022.php'; 
+    
     
 
-    if (!isset($_SESSION['usuario']['tipo_usuario'])) {
+    if (!isset($_SESSION['usuario']['tipo_usuario'])){
         header('location: ../../login.php');
-    exit();
+        exit();
     }
+            
     
     $id_usuario =$_SESSION['usuario']['id_usuario'];
 
@@ -45,6 +47,7 @@
    
 ?>
 <link rel="stylesheet" href="../../css/boton_desplegable.css">
+<link rel="stylesheet" href="../../css/para_index.css">
 <style>
    #barra_arriba{
         -webkit-box-shadow: 10px 1px 56px -17px rgba(0,0,0,0.75);
@@ -162,10 +165,12 @@
         text-decoration: none;
     }
     #escritorio{
-        position: relative;
-        float: left;
-        margin-top: 15px;  
+        margin-left: 30px;
+        margin-top: 70px;  
        
+    }
+    #prof{
+        color: #1496AB;
     }
     
 </style>
@@ -190,16 +195,16 @@
     
 </nav>
 <main id="pag_inicio">
-   <aside id="aside_left"> 
+   <!-- <aside id="aside_left"> 
         <div id="div_aside_1">
            <ul id="tarjeta">
-                    <li id="este_profe"><?php echo $id_usuario_tabla ?></li>
-                    <li id="nombre_D"><div class=""></div><b><?php echo $Nombres?></b></li>
-                    <li id="apellido_D"><div class=""></div><b><?php echo $Apellidos?></b></li>
-                    <!--<li><div class="title"></div><span >Cédula:</span><?php echo $Cedula?></li>
+                    <li ></li>
+                    <li ><div class=""></div><b></b></li>
+                    <li ><div class=""></div><b></b></li>
+                    <li><div class="title"></div><span >Cédula:</span><?php echo $Cedula?></li>
                     <li><div class="title"></div><?php echo $Fecha_nacimiento?></li>
                     <li><div class="title"></div><span >Contancto:</span><?php echo $Fono_celular_1?></li>
-                    <li><div class="title"></div><?php echo $mail?></li>-->
+                    <li><div class="title"></div><?php echo $mail?></li>
                 
             </ul><br>
                     <div class="dropdown">
@@ -211,21 +216,34 @@
                       </div>
                     </div>
         </div>   
-    </aside>
-    <div class="container" id="escritorio">
-           <ul>
+    </aside> -->
+    <div class="container_" id="escritorio">
+        <h3>Año Lectivo 2022 - 2023</h3>   
+        <h3 id="prof"><b><span id="este_profe"><?php echo $id_usuario_tabla ?></span><span id="nombre_D" ><?php echo $Nombres?></span>&nbsp;<span id="apellido_D"><?php echo $Apellidos?></span></b></h3>    
+        <br><br>
+            <!-- <ul>
                <li><div class="title"><a href="#" class="btn btn-default btn-lg active" id="btn_miplan" style ="color: black;"> MI PLAN <br><img src="../../imagenes/plan%20de%20clase.jpg" class="w-75" alt=""></a></div></li>
                <li><div class="title"><a href="#" class="btn btn-default btn-lg active" id="btn_silabo" style ="color: black;"> SILABO <br><img src="../../imagenes/certificado_aventura.jpg" class="w-75" alt=""></a></div></li>
-               <!--<li><div class="title"><a href="#" class="btn btn-default btn-lg active" id="btn_reg_notas" role="
+               <li><div class="title"><a href="#" class="btn btn-default btn-lg active" id="btn_reg_notas" role="
                "> REG.NOTAS <br><img src="../../imagenes/asignaturas.png" class=" w-75" alt=""></a></div></li>   
                <li><div class="title">NOTAS 2020</div></li>
                <li><div class="title">Titulo</div></li>
                <li><div class="title">Titulo</div></li>
                <li><div class="title">Titulo</div></li>
-               <li><div class="title">Titulo</div></li>-->
-           </ul>
-         
-        </div>
+               <li><div class="title">Titulo</div></li>
+           </ul> -->
+           <div class="grid-container g-0" id="escritorio_g">
+                <div class="grid-item" id="curri"><p><img src="../../imagenes/curriculo.png" class="img_" alt=""></p><p>CURRÍCULO</p></div>
+                <div class="grid-item" id="aulas"><p><img src="../../imagenes/aula_.jpg" class="img_" alt=""></p><p>AULAS</p></div>
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+            </div>
+            <?php include 'lectivo2022_2023/index_2022.php'; ?>
+    </div>
 </main>
 <footer></footer>
 <script type="text/javascript" src="../../js/app_docente.js"></script>
@@ -235,6 +253,11 @@
 <script src="../../proyecto_CK5/ckeditor/adapters/jquery.js"></script>
 <script type="text/javascript" src="../../ckfinder/ckfinder.js"></script>
 <script type ="text/javascript" src="../../js_plan/ck_.js"></script>
-<script type ="text/javascript" src="../../js_plan/silabo.js"></script>
+<script type ="text/javascript" src="../../js_plan/js_silabo_2022/silabo_2022.js"></script>
+<script type ="text/javascript" src="../../js/lectivo_2023_JS/docente_2023.js"></script>
+<!-- <script type= "text/javascript" src="/lectivo2022_2023/js/material_es.js"></script> -->
+<script type ="text/javascript" src="lectivo2022_2023/js/material_es.js"></script>
+
+
 
 

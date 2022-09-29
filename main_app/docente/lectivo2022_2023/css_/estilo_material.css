@@ -1,0 +1,41 @@
+#ma_estu{
+    width: 95%;
+    padding: 3px;
+    background-color: rgb(97, 170, 212);
+    color: white;
+}
+#new_material:hover{
+    background-color: yellowgreen;
+}
+#mi_material:hover{
+    background-color: rgb(136, 189, 29);
+}
+
+#datos_enca{
+    width: 90%;
+}
+#tb_temas{
+    width: 95%;
+    border: 1px black;
+    text-align: center;
+}
+#tb_temas thead{
+    background-color: rgba(158, 158, 209, 0.904);    
+}
+#mis_temas{
+    background-color: antiquewhite;
+    align-items: left;
+}
+#material_esS{
+    display: none;
+}
+#mi_materia{
+    width: 30%;
+    background-color: rgba(190, 228, 146, 0.719);
+}
+#mi_titulo{
+    width: 80%;
+}
+#id_mimateria{
+    display: none;
+}

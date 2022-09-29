@@ -14,7 +14,7 @@
     
     //echo $id_usuario;
 
-    $consulta = "SELECT a_lectivo.ano_lectivo, a_lectivo.id_ano_lectivo, oferta_academica.nombre_nivel, oferta_academica.id_oferta_aca, docentes.id_usuario FROM docentes INNER JOIN a_lectivo ON docentes.id_ano_lectivo = a_lectivo.id_ano_lectivo INNER JOIN oferta_academica on docentes.id_oferta_aca = oferta_academica.id_oferta_aca WHERE docentes.id_usuario = $id_usuario and a_lectivo.ano_lectivo ='2021-2022'";
+    $consulta = "SELECT a_lectivo.ano_lectivo, a_lectivo.id_ano_lectivo, oferta_academica.nombre_nivel, oferta_academica.id_oferta_aca, docentes.id_usuario FROM docentes INNER JOIN a_lectivo ON docentes.id_ano_lectivo = a_lectivo.id_ano_lectivo INNER JOIN oferta_academica on docentes.id_oferta_aca = oferta_academica.id_oferta_aca WHERE docentes.id_usuario = $id_usuario and a_lectivo.ano_lectivo ='2022-2023'";
     $resultado = mysqli_query($conexion,$consulta);
     if(!$resultado){
         die ('Error en la consulta '. mysql_error($conexion));

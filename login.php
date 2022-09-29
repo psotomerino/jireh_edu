@@ -3,8 +3,8 @@
      
     session_start();
     if(isset($_SESSION['usuario'])){
-		if($_SESSION['usuario']['tipo_usuario']== "superAdmin"){
-			header('Location: main_app/superadmin/');
+		if($_SESSION['usuario']['tipo_usuario']== "dece"){
+			header('Location: main_app/dece/');
 		}else if($_SESSION['usuario']['tipo_usuario']== "administrativo"){
 			header('Location: main_app/administrador/');
 		}else if($_SESSION['usuario']['tipo_usuario']== "docente"){
@@ -13,6 +13,8 @@
 			header('Location: main_app/estudiante/');
 		}else if($_SESSION['usuario']['tipo_usuario']== "curricular"){
 			header('Location: /main_app/curriculares/');
+		}else if($_SESSION['usuario']['tipo_usuario']== "facturador"){
+			header('Location: /main_app/facturacion/');
 		}
 	}
     //echo $_SESSION['usuario']['tipo_usuario'];

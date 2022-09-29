@@ -15,8 +15,8 @@ jQuery(document).on('submit','#formlg',function (event){
     .done (function(respuesta){
         console.log(respuesta);
         if(!respuesta.error){
-            if(respuesta.tipo == 'superAdmin'){
-                location.href = 'main_app/superadmin/';
+            if(respuesta.tipo == 'dece'){
+                location.href = 'main_app/dece/';
                 
             }else if(respuesta.tipo == 'docente' ){
                 location.href = 'main_app/docente/'; 
@@ -29,7 +29,10 @@ jQuery(document).on('submit','#formlg',function (event){
                 location.href = 'main_app/estudiante/';
                 
             }else if(respuesta.tipo == 'curricular' ){
-                location.href = 'main_app/curriculares/';                
+                location.href = 'main_app/curriculares/'; 
+
+            }else if(respuesta.tipo == 'facturador' ){
+                location.href = 'main_app/facturacion/';                
             }
             
         }else{

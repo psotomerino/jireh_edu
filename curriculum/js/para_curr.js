@@ -12,6 +12,7 @@ $(document).ready(function(){
         $('.Contenedor_OB').hide();
         $('.Contenedor_OE').show();
     });
+
 //***** Cargar Asignatura********
 $.ajax({
     type: 'POST',
@@ -55,10 +56,10 @@ function Objetivo_general(id_asigD){
      let template='';
      listas.forEach(lista =>{             
              template+=`
-             <tr elmentoid="${lista.id_plan}">
-                ${i++ }                 
+             <tr elmentoid="${lista.id_OG}">
+                ${i++ }                               
                 <td>${lista.Objetivo_General}</td> 
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square" id="edit_OB"></i></a></td>        
+                <td> <a href="#"><i class="fa-solid fa-pen-to-square" data-bs-toggle=""  data-bs-target="#editOB" id="edit_OB"></i></a></td>        
             
              </tr>`;
              $('#tot_OB').html(i);
@@ -71,7 +72,42 @@ function Objetivo_general(id_asigD){
        alert('No se pudo cargar la lista de Objetios Generales, intente nuevamente');
      })   
 
-}  
+} 
+/** BOTON EDITAR OBEJTIVO GENERAL */
+$(document).on('click','#edit_OB',function(){
+    let elemento = $(this)[0].parentElement.parentElement.parentElement;
+    let id_OG = $(elemento).attr('elmentoid');
+    //alert (id_OG);
+    $('#editOB').modal('show');
+    busca_OGeneral(id_OG)
+
+});
+/** BUSCA OBJ GENERAL  */
+function busca_OGeneral(id_og){
+    let id = id_og;  
+    var id_envio ={"id_envio":id }; 
+    $.ajax({
+        url: 'backend_curr/solo_OG.php',
+        type: 'POST',
+        data: id_envio,
+        success: function (respuesta)
+            {
+                //alert (respuesta);
+                const item = JSON.parse(respuesta);
+                //alert (item.Objetivo_general);
+                $('#id_OG_').val (item.id_OG);
+                $('._text_edit').text(item.Objetivo_general);            
+               
+                
+            }
+    });
+} 
+/*** EDITA OBJ GENERAL */
+$(document).on('click','#btn_OGEdit',function(e){
+    e.preventDefault();
+    alert ("funciona el boton actualizar el Objetivo General");
+})
+
   
 
 /***FIN DE TODO  */    

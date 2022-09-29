@@ -8,7 +8,7 @@ function get_editsilabos(){
     $id_profe = $_POST['id_profe'];
     $id_silabo = $_POST['id_sil'];
     
-    $query ="SELECT * FROM `silabos` where id_usuario = $id_profe and id_silabo = $id_silabo";
+    $query ="SELECT * FROM `silabos_2022` where id_usuario = $id_profe and id_silabo = $id_silabo";
         
     $resultado = mysqli_query($mysqli,$query);
     

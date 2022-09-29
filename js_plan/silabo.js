@@ -4,9 +4,9 @@ $(document).ready(function(){
     //$('#edit_silabo').richText();
     $('#div_silabo').hide();
     $('#edit_silabo').ckeditor();
+    $('#text_sib_2022').ckeditor();
    
-    var textu="en blanco";
-   
+    var textu="en blanco"; 
     
     
     var id_profe_sib = $("#este_profe").text();

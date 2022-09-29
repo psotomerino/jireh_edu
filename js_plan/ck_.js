@@ -5,7 +5,7 @@ $(document).ready(function (){
     editor_Z = CKEDITOR.replace( 'editor_p' );
     CKFinder.setupCKEditor(editor_Z,'https://jireh.edu.ec/ckeditor.php/ckfinder');
     
-    $(document).on('click','#btn_silabo', function(){
+    $(document).on('click','#btn_silabo_2022', function(){
         
         $('#pag_inicio').hide();
         $('#silabo').show();

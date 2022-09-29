@@ -8,8 +8,9 @@
     include 'lista_estu.php';
     include 'reportes_varios.php';
     include 'form_perfiles.php';
-    /*include 'subir_notas_2021.php';
     include 'docentes_2021.php';
+    /*include 'subir_notas_2021.php';
+   
     include 'sabanas.php';*/
    
         

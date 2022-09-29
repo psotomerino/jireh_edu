@@ -32,3 +32,8 @@
 #table_OE{
     width: 100%;    
 }
+._text_edit{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(172, 223, 206, 0.863);
+}

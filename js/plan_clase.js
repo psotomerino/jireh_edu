@@ -86,7 +86,7 @@ $(document).ready(function(){
 $(document).on('click','#btn_OG_envia',function(e){
                 e.preventDefault();
                 //alert ("botn envia objetivo general"); 
-                let datos = new FormData($("#OG_ingreso")[0]);
+                let datos = new FormData($("#form_OG")[0]);
                 $.ajax({
                     url: '../../backend/inserta_OB.php',
                     type: 'POST',
@@ -97,13 +97,12 @@ $(document).on('click','#btn_OG_envia',function(e){
                     {
                     //console.log(datos);
                     alert (datos);                    
-                    $('#OG_ingreso').trigger('reset');    
+                    $('#form_OG').trigger('reset');    
                         
                      
 
                      }
-
-                  });
+                   });
                     
     
 }); 

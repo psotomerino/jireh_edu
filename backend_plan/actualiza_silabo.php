@@ -10,7 +10,7 @@ function update_silabo(){
     //echo  $texto_sila;
     //echo  $este_sila;
    
-    $consulta = "UPDATE silabos SET
+    $consulta = "UPDATE silabos_2022 SET
                 silabo ='$texto_sila' WHERE id_silabo = $este_sila";
 
     //$resu =mysqli_query($conexion, $consulta);

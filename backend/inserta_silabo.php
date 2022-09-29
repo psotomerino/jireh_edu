@@ -25,7 +25,7 @@
         echo "debe escoger una asignatura para registrar su silabo";
         exit();    
     }
-   $consulta = "INSERT INTO silabos(
+   $consulta = "INSERT INTO silabos_2022(
                 id_usuario,                
                 id_oferta_aca,
                 id_asignatura,

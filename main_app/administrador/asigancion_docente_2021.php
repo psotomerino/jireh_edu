@@ -88,7 +88,7 @@
                        <div class="form-group">
                        <label for="ano_lec">AÑO LECTIVO</label>
                        <select  class="form-control" id="ano_lec" required name="ano_lec">
-										<option value="2">2021-2022</option>
+										<option value="4">2022-2023</option>
 										
 				       </select>
                        </div>
@@ -103,6 +103,7 @@
 										<option value="6">Cuarto EGB</option>
 										<option value="7">Quinto EGB</option>
 										<option value="8">Sexto EGB</option>
+                                        <option value="10">Séptimo EGB</option>
 										
 										
 				       </select> 
