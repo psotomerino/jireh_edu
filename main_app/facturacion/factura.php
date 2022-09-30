@@ -101,8 +101,9 @@
                     <td><input type="text" class="form-control"></td>
                 </tr>
             </table>  
-        </div>
-        <p><button type="submit" class="btn btn-success">generar</button></p>
+        </div>        
     </form>    
     </div>
+    <p><button type="button" id="btn_digi" class="btn btn-success">generar</button></p>
+
 </div>
