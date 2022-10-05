@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura version="1.0.0" id="comprobante">
+  <InfoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>NOMBRE DE LA EMPRESA S.A</razonSocial>
+    <nombreComercial>NOMBRE DE LA EMPRESA S.A</nombreComercial>
+    <ruc>1891807763001</ruc>
+    <claveAcceso>2810202201189180776300110010010000000011234567815</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000001</secuencial>
+    <dirMatriz>DIRECCION DE LA EMPRESA</dirMatriz>
+  </InfoTributaria>
+  <Infofactura>
+    <fechaEmision>04/10/2022</fechaEmision>
+    <dirEstablecimiento>DIRECCION ESTABLECIMIENTO</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>05</tipoIdentificacionComprador>
+    <razonSocialComprador>NOMBRE DEL COMPRADOR</razonSocialComprador>
+    <identificacionComprador>1706461926</identificacionComprador>
+    <totalSinImpuestos>100.00</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuestos>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <baseimponible>1.00</baseimponible>
+        <valor>0</valor>
+      </totalImpuestos>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>1.00</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <fomaPago>01</fomaPago>
+        <total>100.00</total>
+        <plazo>30</plazo>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+  </Infofactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>PROD008</codigoPrincipal>
+      <descripcion>Descripcion del producto</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>100.00</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>100.00</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>0.00</tarifa>
+          <baseImponible>1.00</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>0.00</tarifa>
+          <baseImponible>1.00</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>0.00</tarifa>
+          <baseImponible>1.00</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+</factura>

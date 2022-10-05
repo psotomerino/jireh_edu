@@ -31,13 +31,18 @@ class modulo{
 	}
 }
 $fecha = $_POST['fecha_emi'];
-echo $fecha;
-/*$dig = new modulo();
-$estructura = '290920220118918077630011001001000000100123456781';
-echo $estructura;
-echo '<br>';
-echo 'el digito verificador es '. $dig->getMod11Dv($estructura);
-echo '<br>';
-echo  'la clave de acces es '.$estructura.$dig->getMod11Dv($estructura);*/
+$date = new DateTime($fecha);
+$fecha_fin = $date->format('dmY'); 
+$tipo_comprobante = $_POST['tipo_comprobante'];
+$ruc =$_POST['ruc'];
+$ambiente =$_POST['ambiente'];
+$serie=$_POST['serie'];
+$num_fac=$_POST['num_fac'];
+$codig_num = '12345678';
+$tipo_emision = '1';
+$para_dig= $fecha_fin.$tipo_comprobante.$ruc.$ambiente.$serie.$num_fac.$codig_num.$tipo_emision; 
 
+$dig = new modulo();
+$estructura = $para_dig;
+echo  $estructura.$dig->getMod11Dv($estructura); 
 ?>
