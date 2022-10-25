@@ -1,0 +1,52 @@
+Declare PtrSafe Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" (ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
+Const SW_NORMAL = 1  'para optimizar la aplicación
+
+
+Sub envioCartera()
+
+Dim Rango As Range
+Dim x
+Dim Mensaje As String
+
+
+
+Application.ScreenUpdating = False ' Inabilitar la pantalla
+
+
+For Each Rango In Hoja1.Range("BD[Razón social]") 'Nombre de la tabla y columna
+
+Mensaje = VBA.Replace("whatsapp://send?phone=" & "57" & Rango.Offset(0, 6).Value & "&text=" & _
+"Hola " & Rango.Value & " le escribimos desde ABC para informarle que al día de hoy tenemos una factura pendiente por pagar " & Rango.Offset(0, 1).Value & " del día " & Rango.Offset(0, 2).Value & " con un saldo de " & Rango.Offset(0, 5).Value & ", agradecemos enviarnos el comprobante de pago para cruzar el saldo. Muchas Gracias.", " ", "%20") 'indicativo + número + texto, utilizamos  VBA.Replace para reemplazar los espacios por %20 porque para whatsapp el espacio es %20
+
+
+x = ShellExecute(hwnd, "Open", Mensaje, &O0, &O0, SW_NORMAL)  'Para obtener el mensaje
+
+Application.Wait Now + TimeValue("00:00:04")
+
+Call SendKeys("~", True)  'El caracter ~ es para presionar enter y enviar el mensaje
+
+Call SendKeys("~", True) 'El caracter ~ es para presionar enter y enviar el mensaje
+
+
+Application.Wait Now + TimeValue("00:00:04") 'Para esperar 4 segundos la ejecucion
+
+
+Call SendKeys("~", True)  'El caracter ~ es para presionar enter y enviar el mensaje
+
+
+Application.CutCopyMode = False  'Vaciar de nuevo la memoria
+
+Windows(ThisWorkbook.Name).Activate   'Volver la ventana
+Application.Wait Now + TimeValue("00:00:04") 'Para esperar 2 segundos la ejecucion
+
+
+Next Rango
+
+
+Hoja1.Select
+
+Application.ScreenUpdating = False ' Habilitar la pantalla lo que hace
+
+MsgBox ("Mensaje con Exito"), vbInformation
+
+End Sub
